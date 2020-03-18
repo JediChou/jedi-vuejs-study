@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>010-Demo: use method to bind value</title>
+		<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<!-- container and app -->
+		<div id="container">
+			<div id="app">
+				<p>{{ sayHello() }}</p>
+			</div>
+		</div>
+		
+		<!-- vue define -->
+		<script>
+			new Vue({
+				el: '#app',
+				methods: {
+					sayHello: function() {
+						return "Jedi use function bind value";
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

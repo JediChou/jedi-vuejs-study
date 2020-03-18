@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>010-Demo-函数中绑定data中的属性值</title>
+		<script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<!-- container and app bind -->
+		<div id="container">
+			<div id="app">
+				<p>{{ sayHello() }}</p>
+			</div>
+		</div>
+		
+		<!-- vue define -->
+		<script type="text/javascript">
+			new Vue({
+				el: '#app',
+				data: {
+					title: 'Hello Vue.js'
+				},
+				methods: {
+					sayHello: function() {
+						return this.title;
+					}
+				}
+			})
+			
+		</script>
+	</body>
+</html>
