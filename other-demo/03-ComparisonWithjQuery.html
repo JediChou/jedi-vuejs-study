@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>03-Comparison with jQuery</title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<!-- document container -->
+		<div id="container>">
+			
+			<!-- use vue -->
+			<div id="vue-app">
+				<p>Vue.js app</p>
+				<h1>{{ greetingMsg }}</h1>
+				<input v-model="greetingMsg" />
+			</div>
+			
+			<br><br>
+			
+			<!-- jquery bind -->
+			<div id="jq-app">
+				<p>jQuery app</p>
+				<h1 id="jqTitle"></h1>
+				<input id="jqText" />
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			
+			// vue instance
+			// Jedi: 这个就省力很多！定义、使用即可。
+			new Vue({
+				el: '#vue-app',
+				data: {
+					greetingMsg: 'Hello Vue.js'
+				}
+			});
+			
+			// jquery bind
+			// Jedi: 对于我来说有时候非常不明确到底是该用text()，还是用val()
+			$('#jqTitle').text('Hello jQuery');
+			$('#jqText').val('Hello jQuery');
+			
+		</script>
+		
+	</body>
+</html>
